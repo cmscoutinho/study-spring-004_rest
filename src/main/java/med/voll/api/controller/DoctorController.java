@@ -1,6 +1,7 @@
 package med.voll.api.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DoctorController {
 
     @PostMapping
-    public void register(String json) {
+    public void register(@RequestBody String json) {
         System.out.println(json);
     };
 }
