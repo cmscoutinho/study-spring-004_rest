@@ -1,3 +1,3 @@
 package med.voll.api.model.doctor;
 
-public record DoctorRegistryData (String name, String email, String crm) {}
+public record DoctorRegistryData (String name, String email, String crm, Speciality speciality) {}

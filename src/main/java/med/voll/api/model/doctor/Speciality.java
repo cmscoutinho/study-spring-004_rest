@@ -1,2 +1,8 @@
-package med.voll.api.model.doctor;public enum Speciality {
+package med.voll.api.model.doctor;
+
+public enum Speciality {
+    ORTHOPEDICS,
+    CARDIOLOGY,
+    GYNECOLOGY,
+    DERMATOLOGY;
 }
