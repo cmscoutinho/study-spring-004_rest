@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DoctorController {
 
     @PostMapping
-    public void register(@RequestBody String json) {
-        System.out.println(json);
+    public void register(@RequestBody DoctorRegistryData data) {
+        System.out.println(data);
     };
 }
