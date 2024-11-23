@@ -1,4 +1,4 @@
-package med.voll.api.model;
+package med.voll.api.model.address;
 
 public record AddressData(String street,
                           String neighbourhood,
