@@ -1,4 +1,4 @@
-package med.voll.api.model.pacient;
+package med.voll.api.model.patient;
 
 public record PatientRegistryData() {
 }
