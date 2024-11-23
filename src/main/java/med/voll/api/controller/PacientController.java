@@ -1,2 +1,10 @@
-package med.voll.api.controller;public class PacientController {
+package med.voll.api.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/pacients")
+public class PacientController {
+
 }
