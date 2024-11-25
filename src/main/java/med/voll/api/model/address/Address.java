@@ -18,4 +18,8 @@ public class Address {
     private String state;
     private String additionalInfo;
     private String number;
+
+    public Address(AddressData address) {
+        this.street =
+    }
 }

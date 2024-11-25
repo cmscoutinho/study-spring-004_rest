@@ -26,7 +26,7 @@ public class Doctor {
     private Speciality speciality;
 
     @Embedded
-    private AddressData address;
+    private Address address;
 
     public Doctor(DoctorRegistryData data) {
         this.name = data.name();
