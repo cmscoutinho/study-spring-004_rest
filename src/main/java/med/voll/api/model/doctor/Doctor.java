@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.model.address.Address;
 import med.voll.api.model.address.AddressData;
 
 @Entity(name = "Doctor")
@@ -26,4 +27,11 @@ public class Doctor {
 
     @Embedded
     private AddressData address;
+
+    public Doctor(DoctorRegistryData data) {
+        this.name = data.name();
+        this.email = data.email();
+        this.crm = data.crm();
+        this.address = new Address(data.address());
+    }
 }

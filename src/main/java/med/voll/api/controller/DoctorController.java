@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import med.voll.api.model.doctor.Doctor;
 import med.voll.api.model.doctor.DoctorRegistryData;
 import med.voll.api.model.doctor.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,6 @@ public class DoctorController {
     private DoctorRepository repository;
     @PostMapping
     public void register(@RequestBody DoctorRegistryData data) {
-        System.out.println(data);
+        repository.save(new Doctor(data));
     };
 }
