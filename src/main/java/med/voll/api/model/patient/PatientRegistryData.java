@@ -1,4 +1,10 @@
 package med.voll.api.model.patient;
 
-public record PatientRegistryData() {
+import med.voll.api.model.address.AddressData;
+
+public record PatientRegistryData(String name,
+                                  String email,
+                                  String phone,
+                                  String cpf,
+                                  AddressData address) {
 }
