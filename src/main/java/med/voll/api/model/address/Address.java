@@ -1,2 +1,4 @@
-package med.voll.api.model.address;public class Address {
+package med.voll.api.model.address;
+
+public class Address {
 }
