@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/patients")
 public class PatientController {
 
+    @PostMapping
     public void register(@RequestBody PatientRegistryData data) {
         System.out.println(data);
     }
