@@ -20,6 +20,12 @@ public class Address {
     private String number;
 
     public Address(AddressData address) {
-        this.street =
+        this.street = address.street();
+        this.neighbourhood = address.neighbourhood();
+        this.zipCode = address.zipCode();
+        this.city = address.city();
+        this.street = address.state();
+        this.additionalInfo = address.additionalInfo();
+        this.number = address.number();
     }
 }
