@@ -1,2 +1,4 @@
-package med.voll.api.model.patient;public class Patient {
+package med.voll.api.model.patient;
+
+public class Patient {
 }
