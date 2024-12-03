@@ -23,7 +23,7 @@ public class DoctorController {
     };
 
     @GetMapping
-    public List<Doctor> list() {
+    public List<DoctorListData> list() {
         return repository.findAll();
     }
 }
