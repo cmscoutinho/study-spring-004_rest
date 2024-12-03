@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/doctors")
 public class DoctorController {
@@ -22,4 +24,8 @@ public class DoctorController {
     public void register(@RequestBody @Valid DoctorRegistryData data) {
         repository.save(new Doctor(data));
     };
+
+    public List<Doctor> list() {
+
+    }
 }
