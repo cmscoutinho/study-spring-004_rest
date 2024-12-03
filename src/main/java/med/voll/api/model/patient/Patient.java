@@ -1,12 +1,11 @@
 package med.voll.api.model.patient;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.model.address.AddressData;
+import med.voll.api.model.address.Address;
 
 @Entity(name = "Patient")
 @Table(name = "patients")
@@ -16,17 +15,22 @@ import med.voll.api.model.address.AddressData;
 @EqualsAndHashCode(of = "id")
 public class Patient {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
     String name;
     String email;
     String phone;
     String cpf;
-    AddressData address;
+
+    @Embedded
+    Address address;
 
     public Patient(PatientRegistryData data) {
         this.name = data.name();
         this.email = data.email();
         this.phone = data.phone();
         this.cpf = data.cpf();
-        this.address = data.address();
+        this.address = new Address(data.address());
     }
 }
