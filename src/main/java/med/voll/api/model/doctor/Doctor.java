@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.model.address.Address;
-import med.voll.api.model.address.AddressData;
 
 @Entity(name = "Doctor")
 @Table(name = "doctors")
