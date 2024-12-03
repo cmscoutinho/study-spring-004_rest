@@ -16,15 +16,15 @@ import med.voll.api.model.address.Address;
 public class Patient {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
-    String name;
-    String email;
-    String phone;
-    String cpf;
+    private String name;
+    private String email;
+    private String phone;
+    private String cpf;
 
     @Embedded
-    Address address;
+    private Address address;
 
     public Patient(PatientRegistryData data) {
         this.name = data.name();
