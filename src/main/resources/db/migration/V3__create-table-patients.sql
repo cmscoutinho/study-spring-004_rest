@@ -4,7 +4,7 @@ create table patients(
     name varchar(100) not null,
     email varchar(100) not null unique,
     cpf varchar(14) not null unique,
-    phone varchar(8) not null,
+    phone varchar(20) not null,
     street varchar(100) not null,
     neighbourhood varchar(100) not null,
     zipCode varchar(9) not null,
