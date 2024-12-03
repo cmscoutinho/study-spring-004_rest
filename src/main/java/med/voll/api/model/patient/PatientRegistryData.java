@@ -16,11 +16,10 @@ public record PatientRegistryData(
         String email,
 
         @NotBlank
-        @Pattern(regexp = "\\d{8}")
         String phone,
 
         @NotBlank
-        @Pattern(regexp = "\\d{11}")
+        @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
         String cpf,
 
         @NotBlank
