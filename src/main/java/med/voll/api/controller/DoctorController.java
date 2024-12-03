@@ -24,6 +24,6 @@ public class DoctorController {
 
     @GetMapping
     public List<Doctor> list() {
-
+        return repository.findAll();
     }
 }
