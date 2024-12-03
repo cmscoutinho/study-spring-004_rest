@@ -25,6 +25,6 @@ public class DoctorController {
 
     @GetMapping
     public List<DoctorListData> list() {
-        return repository.findAll();
+        return repository.findAll().stream().map(DoctorListData::new);
     }
 }
