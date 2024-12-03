@@ -2,6 +2,7 @@ package med.voll.api.controller;
 
 import jakarta.validation.Valid;
 import med.voll.api.model.doctor.Doctor;
+import med.voll.api.model.doctor.DoctorListData;
 import med.voll.api.model.doctor.DoctorRegistryData;
 import med.voll.api.model.doctor.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
