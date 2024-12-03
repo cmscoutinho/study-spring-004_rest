@@ -1,6 +1,7 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
+import med.voll.api.model.patient.Patient;
 import med.voll.api.model.patient.PatientRegistryData;
 import med.voll.api.model.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,6 @@ public class PatientController {
     @PostMapping
     @Transactional
     public void register(@RequestBody @Valid PatientRegistryData data) {
-        System.out.println(data);
+        repository.save(new Patient(data));
     }
 }
