@@ -8,6 +8,7 @@ import med.voll.api.model.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class PatientController {
     private PatientRepository repository;
 
     @GetMapping
-    public Page<PatientListData> list(Pageable pagination) {
+    public Page<PatientListData> list(@PageableDefault(size = 10, sort = {"name"}) Pageable pagination) {
         return repository.findAll(pagination).map(PatientListData::new);
     }
 
