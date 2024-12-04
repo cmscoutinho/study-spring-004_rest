@@ -5,6 +5,8 @@ import med.voll.api.model.patient.Patient;
 import med.voll.api.model.patient.PatientRegistryData;
 import med.voll.api.model.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +19,10 @@ public class PatientController {
 
     @Autowired
     private PatientRepository repository;
+
+    public Page<Patient> list(Pageable pagination) {
+        return repository.findAll(pagination).map(PatientRegistryData::new);
+    }
 
     @PostMapping
     @Transactional
