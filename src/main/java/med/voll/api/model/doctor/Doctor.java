@@ -36,4 +36,7 @@ public class Doctor {
         this.speciality = data.speciality();
         this.address = new Address(data.address());
     }
+
+    public void updateInfo(DoctorUpdateData data) {
+    }
 }
