@@ -29,6 +29,8 @@ public class DoctorController {
         return repository.findAll(pagination).map(DoctorListData::new);
     }
 
+    @PutMapping
+    @Transactional
     public void update() {
 
     }
