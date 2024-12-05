@@ -28,4 +28,8 @@ public class DoctorController {
     public Page<DoctorListData> list(@PageableDefault(size = 10, sort = {"name"}) Pageable pagination) {
         return repository.findAll(pagination).map(DoctorListData::new);
     }
+
+    public void update() {
+
+    }
 }
