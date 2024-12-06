@@ -47,7 +47,7 @@ public class Doctor {
         }
 
         if (data.address() != null) {
-            this.address = address.updateInfo(data);
+            this.address.updateInfo(data.address());
         }
     }
 }

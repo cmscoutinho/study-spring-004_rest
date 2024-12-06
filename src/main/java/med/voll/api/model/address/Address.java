@@ -4,7 +4,6 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.model.doctor.DoctorUpdateData;
 
 @Embeddable
 @Getter
@@ -30,6 +29,27 @@ public class Address {
         this.number = address.number();
     }
 
-    public Address updateInfo(DoctorUpdateData data) {
+    public void updateInfo(AddressData data) {
+        if (data.street() != null) {
+            this.street = data.street();
+        }
+        if (data.neighbourhood() != null) {
+            this.neighbourhood = data.neighbourhood();
+        }
+        if (data.zipCode() != null) {
+            this.zipCode = data.zipCode();
+        }
+        if (data.state() != null) {
+            this.street = data.state();
+        }
+        if (data.city() != null) {
+            this.city = data.city();
+        }
+        if (data.number() != null) {
+            this.number = data.number();
+        }
+        if (data.additionalInfo() != null) {
+            this.additionalInfo = data.additionalInfo();
+        }
     }
 }
