@@ -2,6 +2,7 @@ package med.voll.api.model.doctor;
 
 import jakarta.validation.constraints.NotNull;
 import med.voll.api.model.address.Address;
+import med.voll.api.model.address.AddressData;
 
 public record DoctorUpdateData(
         @NotNull
@@ -9,6 +10,6 @@ public record DoctorUpdateData(
 
         String name,
         String phone,
-        Address address;
+        AddressData address
 ) {
 }
