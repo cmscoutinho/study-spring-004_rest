@@ -34,6 +34,7 @@ public class DoctorController {
     }
 
     @DeleteMapping("/{id}")
+    @Transactional
     public void delete(@PathVariable Long id) {
 
     }
