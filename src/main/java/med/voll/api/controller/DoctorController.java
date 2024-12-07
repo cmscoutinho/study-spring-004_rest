@@ -32,4 +32,8 @@ public class DoctorController {
         var doctor = repository.getReferenceById(data.id());
         doctor.updateInfo(data);
     }
+
+    public void delete() {
+
+    }
 }
