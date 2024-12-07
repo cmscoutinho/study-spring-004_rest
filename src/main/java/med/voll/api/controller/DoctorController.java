@@ -34,7 +34,7 @@ public class DoctorController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete() {
+    public void delete(@PathVariable Long id) {
 
     }
 }
