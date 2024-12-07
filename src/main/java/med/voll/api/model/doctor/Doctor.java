@@ -28,6 +28,8 @@ public class Doctor {
     @Embedded
     private Address address;
 
+    private Boolean active;
+
     public Doctor(DoctorRegistryData data) {
         this.name = data.name();
         this.email = data.email();
