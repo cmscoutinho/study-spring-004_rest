@@ -33,6 +33,7 @@ public class DoctorController {
         doctor.updateInfo(data);
     }
 
+    @DeleteMapping
     public void delete() {
 
     }
