@@ -31,6 +31,7 @@ public class Doctor {
     private Boolean active;
 
     public Doctor(DoctorRegistryData data) {
+        this.active = true;
         this.name = data.name();
         this.email = data.email();
         this.phone = data.phone();
