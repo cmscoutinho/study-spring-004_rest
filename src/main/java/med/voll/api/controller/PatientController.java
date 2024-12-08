@@ -29,4 +29,11 @@ public class PatientController {
     public void register(@RequestBody @Valid PatientRegistryData data) {
         repository.save(new Patient(data));
     }
+
+    @PutMapping("/{id}")
+    @Transactional
+    public void update(@PathVariable Long id) {
+        var patient = repository.getReferenceById(id);
+        patient.updateInfo();
+    }
 }
