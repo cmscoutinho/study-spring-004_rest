@@ -53,4 +53,7 @@ public class Doctor {
             this.address.updateInfo(data.address());
         }
     }
+
+    public void delete() {
+    }
 }
