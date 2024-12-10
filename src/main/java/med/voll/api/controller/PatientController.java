@@ -27,7 +27,7 @@ public class PatientController {
         repository.save(new Patient(data));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping
     @Transactional
     public void update(@RequestBody @Valid PatientUpdateData data) {
         var patient = repository.getReferenceById(data.id());
