@@ -1,10 +1,7 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.model.patient.Patient;
-import med.voll.api.model.patient.PatientListData;
-import med.voll.api.model.patient.PatientRegistryData;
-import med.voll.api.model.patient.PatientRepository;
+import med.voll.api.model.patient.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,8 +29,8 @@ public class PatientController {
 
     @PutMapping("/{id}")
     @Transactional
-    public void update(@PathVariable Long id) {
-        var patient = repository.getReferenceById(id);
+    public void update(@RequestBody @Valid PatientUpdateData data) {
+        var patient = repository.getReferenceById(data.id());
         patient.updateInfo();
     }
 }
