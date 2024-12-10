@@ -50,4 +50,7 @@ public class Patient {
             this.address = data.address();
         }
     }
+
+    public void delete() {
+    }
 }
