@@ -31,6 +31,6 @@ public class PatientController {
     @Transactional
     public void update(@RequestBody @Valid PatientUpdateData data) {
         var patient = repository.getReferenceById(data.id());
-        patient.updateInfo();
+        patient.updateInfo(data);
     }
 }
