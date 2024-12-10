@@ -33,4 +33,7 @@ public class Patient {
         this.cpf = data.cpf();
         this.address = new Address(data.address());
     }
+
+    public void updateInfo() {
+    }
 }
