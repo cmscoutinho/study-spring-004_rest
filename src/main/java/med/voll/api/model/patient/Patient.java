@@ -1,13 +1,11 @@
 package med.voll.api.model.patient;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.model.address.Address;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Entity(name = "Patient")
 @Table(name = "patients")
@@ -52,5 +50,6 @@ public class Patient {
     }
 
     public void delete() {
+
     }
 }
