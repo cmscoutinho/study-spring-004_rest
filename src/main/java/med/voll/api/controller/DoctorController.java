@@ -23,9 +23,10 @@ public class DoctorController {
     };
 
     @GetMapping
-    public Page<DoctorListData> list(@PageableDefault(size = 10, sort = {"name"}) Pageable pagination) {
+    public ResponseEntity<Page<DoctorListData>> list(@PageableDefault(size = 10, sort = {"name"}) Pageable pagination) {
         //return repository.findAll(pagination).map(DoctorListData::new);
-        return repository.findByActiveTrue(pagination).map(DoctorListData::new);
+        var page = repository.findByActiveTrue(pagination).map(DoctorListData::new);
+        return ResponseEntity.ok(page);
     }
 
     @PutMapping
