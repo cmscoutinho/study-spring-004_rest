@@ -18,7 +18,8 @@ public class PatientController {
 
     @GetMapping
     public Page<PatientListData> list(@PageableDefault(size = 10, sort = {"name"}, page = 0) Pageable pagination) {
-        return repository.findAll(pagination).map(PatientListData::new);
+        //return repository.findAll(pagination).map(PatientListData::new);
+        return repository.findByActiveTrue(pagination).map(PatientListData::new);
     }
 
     @PostMapping
