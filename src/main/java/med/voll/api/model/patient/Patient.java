@@ -53,6 +53,6 @@ public class Patient {
     }
 
     public void delete() {
-        this.ac
+        this.active = false;
     }
 }
