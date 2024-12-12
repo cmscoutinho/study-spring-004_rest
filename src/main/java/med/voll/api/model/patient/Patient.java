@@ -27,7 +27,10 @@ public class Patient {
     @Embedded
     private Address address;
 
+    private Boolean active;
+
     public Patient(PatientRegistryData data) {
+        this.active = true;
         this.name = data.name();
         this.email = data.email();
         this.phone = data.phone();
@@ -50,6 +53,6 @@ public class Patient {
     }
 
     public void delete() {
-
+        this.ac
     }
 }
