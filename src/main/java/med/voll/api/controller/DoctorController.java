@@ -31,9 +31,11 @@ public class DoctorController {
 
     @PutMapping
     @Transactional
-    public void update(@RequestBody @Valid DoctorUpdateData data) {
+    public ResponseEntity update(@RequestBody @Valid DoctorUpdateData data) {
         var doctor = repository.getReferenceById(data.id());
         doctor.updateInfo(data);
+
+        return ResponseEntity.ok(new DoctorDetailmentData(doctor));
     }
 
     @DeleteMapping("/{id}")
