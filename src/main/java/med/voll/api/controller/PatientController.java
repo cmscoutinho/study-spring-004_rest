@@ -26,7 +26,7 @@ public class PatientController {
 
     @PostMapping
     @Transactional
-    public void register(@RequestBody @Valid PatientRegistryData data) {
+    public ResponseEntity register(@RequestBody @Valid PatientRegistryData data) {
         repository.save(new Patient(data));
     }
 
