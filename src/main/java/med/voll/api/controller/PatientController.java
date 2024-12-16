@@ -34,6 +34,8 @@ public class PatientController {
     public ResponseEntity update(@RequestBody @Valid PatientUpdateData data) {
         var patient = repository.getReferenceById(data.id());
         patient.updateInfo(data);
+
+        return ResponseEntity.ok(new PatientDetailmentData(doctor));
     }
 
     @DeleteMapping("/{id}")
