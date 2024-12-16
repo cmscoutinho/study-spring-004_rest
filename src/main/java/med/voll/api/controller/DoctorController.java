@@ -52,4 +52,13 @@ public class DoctorController {
         doctor.delete();
         return ResponseEntity.noContent().build();
     }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity delete(@PathVariable Long id) {
+        //repository.deleteById(id);
+        var doctor = repository.getReferenceById(id);
+        doctor.delete();
+        return ResponseEntity.noContent().build();
+    }
 }
