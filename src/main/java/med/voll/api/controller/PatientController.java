@@ -35,7 +35,7 @@ public class PatientController {
         var patient = repository.getReferenceById(data.id());
         patient.updateInfo(data);
 
-        return ResponseEntity.ok(new PatientDetailmentData(doctor));
+        return ResponseEntity.ok(new PatientDetailmentData(patient));
     }
 
     @DeleteMapping("/{id}")
