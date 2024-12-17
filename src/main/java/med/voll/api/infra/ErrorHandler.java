@@ -15,7 +15,8 @@ public class ErrorHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity handleError400() {
+    public ResponseEntity handleError400(MethodArgumentNotValidException exception) {
+
         return ResponseEntity.badRequest().build();
     }
 
