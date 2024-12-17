@@ -1,11 +1,11 @@
-package med.voll.api.model.patient;
+package med.voll.api.domain.patient;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.model.address.Address;
+import med.voll.api.domain.address.Address;
 
 @Entity(name = "Patient")
 @Table(name = "patients")
