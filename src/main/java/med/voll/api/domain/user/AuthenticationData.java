@@ -1,2 +1,4 @@
-package med.voll.api.domain.user;public class AuthenticationData {
+package med.voll.api.domain.user;
+
+public record AuthenticationData(String uname, String upass) {
 }
