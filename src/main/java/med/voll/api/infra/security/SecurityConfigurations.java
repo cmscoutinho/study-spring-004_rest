@@ -19,7 +19,7 @@ public class SecurityConfigurations {
                 .build();
     }
 
-    public AuthenticationManager authenticationManager() {
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) {
 
     }
 
