@@ -1,4 +1,4 @@
 package med.voll.api.domain.user;
 
-public record AuthenticationData(String uname, String upass) {
+public record AuthenticationData(String login, String password) {
 }
