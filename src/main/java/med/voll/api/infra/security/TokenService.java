@@ -7,6 +7,8 @@ import med.voll.api.domain.user.User;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Date;
 
 @Service
@@ -27,7 +29,7 @@ public class TokenService {
     }
 
     private Instant expiringDate() {
-
+        return LocalDateTime.now().plusHours().toInstant(ZoneOffset.of("-03:00"));
     }
 
 }
