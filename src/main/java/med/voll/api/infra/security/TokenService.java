@@ -1,18 +1,28 @@
 package med.voll.api.infra.security;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+import med.voll.api.domain.user.User;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 @Service
 public class TokenService {
 
-    public String generateToken() {
+    public String generateToken(User user) {
         try {
-            Algorithm algorithm = Algorithm.RSA256(rsaPublicKey, rsaPrivateKey);
-            String token = JWT.create()
-                    .withIssuer("auth0")
+            var algorithm = Algorithm.HMAC256("12345678");
+            return JWT.create()
+                    .withIssuer("API Voll.med")
+                    .withSubject(user.getLogin())
+                    .withExpiresAt(expiringDate())
+                    .withClaim("id", user.getId())
                     .sign(algorithm);
         } catch (JWTCreationException exception) {
-            // Invalid Signing configuration / Couldn't convert Claims.
+            throw new RuntimeException("Erroa o gerar token jwt", exception);
         }
     }
+
 }
