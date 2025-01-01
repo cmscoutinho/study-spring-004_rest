@@ -15,5 +15,10 @@ public class SecurityFilter extends OncePerRequestFilter {
     }
 
     private String retrieveToken(HttpServletRequest request) {
+        var authorizationToken = request.getHeader("Authorization");
+        if (authorizationToken == null) 
+            throw new RuntimeException("Missing JWT token in header Authorization");
+
+        return authorizationToken;
     } 
 }
