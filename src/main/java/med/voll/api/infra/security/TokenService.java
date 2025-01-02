@@ -24,7 +24,7 @@ public class TokenService {
                     .withClaim("id", user.getId())
                     .sign(algorithm);
         } catch (JWTCreationException exception) {
-            throw new RuntimeException("Erro ao gerar token jwt", exception);
+            throw new RuntimeException("Error! Couldn't generate JWT token.", exception);
         }
     }
 
