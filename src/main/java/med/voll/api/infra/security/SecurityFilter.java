@@ -15,6 +15,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         System.out.println("REQUEST!");
         var token = retrieveToken(request);
+        System.out.println(token);
 
         filterChain.doFilter(request, response);
     }
@@ -24,6 +25,6 @@ public class SecurityFilter extends OncePerRequestFilter {
         if (authorizationToken == null) 
             throw new RuntimeException("Missing JWT token in header Authorization");
 
-        return authorizationToken;
+        return authorizationToken.replace("Bearer ", "");
     } 
 }
