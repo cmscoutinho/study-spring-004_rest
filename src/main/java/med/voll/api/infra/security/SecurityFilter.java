@@ -25,6 +25,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         var token = retrieveToken(request);
 
         var subject = tokenService.getSubject(token);
+        var usuario = repository.findByLogin(subject);
 
         filterChain.doFilter(request, response);
     }
