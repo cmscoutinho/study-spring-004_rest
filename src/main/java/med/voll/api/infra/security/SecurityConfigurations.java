@@ -29,7 +29,7 @@ public class SecurityConfigurations {
                     req.requestMatchers("/login").permitAll();
                     req.anyRequest().authenticated();
                 })
-                //.addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
