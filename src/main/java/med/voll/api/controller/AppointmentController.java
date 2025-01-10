@@ -17,6 +17,6 @@ public class AppointmentController {
     @Transactional
     public ResponseEntity book(@RequestBody @Valid AppointmentBookingData data) {
         System.out.println(data);
-        return ResponseEntity.ok(new AppointmentDetailmentData(id, idDoctor, idPatient, data));
+        return ResponseEntity.ok(new AppointmentDetailmentData(null, null, null, null));
     }
 }
