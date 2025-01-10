@@ -1,4 +1,4 @@
-package med.voll.api.controller;
+package med.voll.api.domain.appointment;
 
 import jakarta.validation.Valid;
 import med.voll.api.domain.appointment.AppointmentBookingData;
