@@ -1,2 +1,7 @@
-package med.voll.api.domain.appointment;public class AppointmentBooking {
+package med.voll.api.domain.appointment;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AppointmentBooking {
 }
