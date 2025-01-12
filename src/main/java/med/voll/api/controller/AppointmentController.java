@@ -22,7 +22,7 @@ public class AppointmentController {
     @PostMapping
     @Transactional
     public ResponseEntity book(@RequestBody @Valid AppointmentBookingData data) {
-        System.out.println(data);
+        book.book(data);
         return ResponseEntity.ok(new AppointmentDetailmentData(null, null, null, null));
     }
 }
