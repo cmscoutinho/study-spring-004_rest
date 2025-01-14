@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class AppointmentController {
 
     @Autowired
-    private AppointmentBooking book;
+    private AppointmentBooking schedule;
 
     @PostMapping
     @Transactional
     public ResponseEntity book(@RequestBody @Valid AppointmentBookingData data) {
-        book.book(data);
+        schedule.book(data);
         return ResponseEntity.ok(new AppointmentDetailmentData(null, null, null, null));
     }
 }
