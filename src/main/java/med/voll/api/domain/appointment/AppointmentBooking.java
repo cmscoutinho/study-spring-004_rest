@@ -9,6 +9,7 @@ public class AppointmentBooking {
     @Autowired
     private AppointmentRepository repository;
     public void book(AppointmentBookingData data) {
-
+        var appointment = new Appointment();
+        repository.save(appointment);
     }
 }
