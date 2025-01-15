@@ -1,5 +1,6 @@
 package med.voll.api.domain.appointment;
 
+import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
