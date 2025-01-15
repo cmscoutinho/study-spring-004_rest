@@ -18,7 +18,9 @@ public class AppointmentBooking {
     private PatientRepository patientRepository;
 
     public void book(AppointmentBookingData data) {
-        var appointment = new Appointment();
+        var patient = patientRepository.findById(data.idPatient()).get();
+        var doctor = doctorRepository.findById(data.idDoctor()).get();
+        var appointment = new Appointment(null, doctor, patient, data.date());
         repository.save(appointment);
     }
 }
