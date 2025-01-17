@@ -35,6 +35,12 @@ public class AppointmentBooking {
     }
 
     private Doctor chooseDoctor(AppointmentBookingData data) {
-        return null;
+        if (data.idDoctor() != null)
+            return doctorRepository.getReferenceById(data.idDoctor());
+
+        if (data.speciality() == null)
+            throw new ValidationException("Speciality needed when no doctor is chosen!");
+
+        return doctorRepository.chooseRandomDoctorAvailableInDate(data.speciality(), data.date());
     }
 }
