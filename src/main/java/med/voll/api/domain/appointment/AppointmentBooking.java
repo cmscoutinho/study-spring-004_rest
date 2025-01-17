@@ -28,7 +28,7 @@ public class AppointmentBooking {
             throw new ValidationException("ID of given doctor does not exist!");
         }
 
-        var patient = patientRepository.findById(data.idPatient()).get();
+        var patient = patientRepository.getReferenceById(data.idPatient());
         var doctor = chooseDoctor(data);
         var appointment = new Appointment(null, doctor, patient, data.date());
         repository.save(appointment);
