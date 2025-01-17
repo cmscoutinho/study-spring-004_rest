@@ -32,4 +32,7 @@ public class AppointmentBooking {
         var appointment = new Appointment(null, doctor, patient, data.date());
         repository.save(appointment);
     }
+
+    private Object chooseDoctor(AppointmentBookingData data) {
+    }
 }
