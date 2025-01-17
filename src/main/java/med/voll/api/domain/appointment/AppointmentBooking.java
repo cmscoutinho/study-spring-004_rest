@@ -1,6 +1,7 @@
 package med.voll.api.domain.appointment;
 
 import med.voll.api.domain.ValidationException;
+import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class AppointmentBooking {
         repository.save(appointment);
     }
 
-    private Object chooseDoctor(AppointmentBookingData data) {
+    private Doctor chooseDoctor(AppointmentBookingData data) {
+        return null;
     }
 }
