@@ -1,2 +1,4 @@
-package med.voll.api.domain.appointment;public class AppointmentCancellationData {
+package med.voll.api.domain.appointment;
+
+public record AppointmentCancellationData {
 }

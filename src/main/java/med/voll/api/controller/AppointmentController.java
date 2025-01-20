@@ -1,10 +1,7 @@
 package med.voll.api.controller;
 
 import jakarta.validation.Valid;
-import med.voll.api.domain.appointment.AppointmentBooking;
-import med.voll.api.domain.appointment.AppointmentBookingData;
-import med.voll.api.domain.appointment.AppointmentCancellation;
-import med.voll.api.domain.appointment.AppointmentDetailmentData;
+import med.voll.api.domain.appointment.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
