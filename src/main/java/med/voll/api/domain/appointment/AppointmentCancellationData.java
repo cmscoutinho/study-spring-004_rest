@@ -9,6 +9,6 @@ public record AppointmentCancellationData(
         Long idAppointment,
 
         @NotBlank
-        String reason
+        CancellationReason reason
 ) {
 }
