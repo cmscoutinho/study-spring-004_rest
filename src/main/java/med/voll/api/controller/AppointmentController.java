@@ -24,6 +24,6 @@ public class AppointmentController {
     @DeleteMapping
     @Transactional
     public ResponseEntity cancel(@RequestBody @Valid AppointmentCancellationData data) {
-
+        return ResponseEntity.noContent().build();
     }
 }
