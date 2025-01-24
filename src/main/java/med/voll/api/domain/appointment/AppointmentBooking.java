@@ -43,4 +43,7 @@ public class AppointmentBooking {
 
         return doctorRepository.chooseRandomDoctorAvailableInDate(data.speciality(), data.date());
     }
+
+    public void cancel(AppointmentCancellationData data) {
+    } 
 }
