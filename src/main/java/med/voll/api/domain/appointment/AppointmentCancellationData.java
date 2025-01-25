@@ -5,10 +5,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record AppointmentCancellationData(
 
-        @NotNull
-        Long idAppointment,
+        @NotNull Long idAppointment,
 
-        @NotBlank
-        CancellationReason reason
-) {
+        @NotBlank CancellationReason reason) {
 }
