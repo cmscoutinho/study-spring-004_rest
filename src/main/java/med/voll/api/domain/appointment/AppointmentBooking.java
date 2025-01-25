@@ -45,5 +45,8 @@ public class AppointmentBooking {
     }
 
     public void cancel(AppointmentCancellationData data) {
+        if (!appointmentRepository.existsById(data.idConsulta())) {
+            throw new ValidationException("The given appointment id doesn't exist!");
+        }
     } 
 }
