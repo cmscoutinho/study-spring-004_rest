@@ -45,10 +45,11 @@ public class AppointmentBooking {
     }
 
     public void cancel(AppointmentCancellationData data) {
-        if (!appointmentRepository.existsById(data.idConsulta())) {
+        if (!appointmentRepository.existsById(data.idAppointment())) {
             throw new ValidationException("The given appointment id doesn't exist!");
         }
 
-
+        var appointment = appointmentRepository.getReferenceById(data.idAppointment());
+        appointment.cancel(data.reason());
     } 
 }
