@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class AppointmentBooking {
 
     @Autowired
-    private AppointmentRepository repository;
+    private AppointmentRepository appointmentRepository;
 
     @Autowired
     private DoctorRepository doctorRepository;
@@ -31,7 +31,7 @@ public class AppointmentBooking {
         var patient = patientRepository.getReferenceById(data.idPatient());
         var doctor = chooseDoctor(data);
         var appointment = new Appointment(null, doctor, patient, data.date());
-        repository.save(appointment);
+        appointmentRepository.save(appointment);
     }
 
     private Doctor chooseDoctor(AppointmentBookingData data) {
@@ -48,5 +48,7 @@ public class AppointmentBooking {
         if (!appointmentRepository.existsById(data.idConsulta())) {
             throw new ValidationException("The given appointment id doesn't exist!");
         }
+
+
     } 
 }
