@@ -30,4 +30,7 @@ public class Appointment {
     private Patient patient;
 
     private LocalDateTime date;
+
+    public void cancel(CancellationReason reason) {
+    }
 }
