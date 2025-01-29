@@ -36,5 +36,6 @@ public class Appointment {
     private CancellationReason cancellationReason;
 
     public void cancel(CancellationReason reason) {
+        this.cancellationReason = reason;
     }
 }
