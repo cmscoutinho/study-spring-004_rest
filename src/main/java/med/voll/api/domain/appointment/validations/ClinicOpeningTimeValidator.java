@@ -1,2 +1,4 @@
-package med.voll.api.domain.appointment.validations;public class ClinicOpeningTimeValidator {
+package med.voll.api.domain.appointment.validations;
+
+public class ClinicOpeningTimeValidator {
 }

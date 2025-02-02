@@ -7,5 +7,5 @@ public record AppointmentCancellationData(
 
         @NotNull Long idAppointment,
 
-        @NotBlank CancellationReason reason) {
+        @NotNull CancellationReason reason) {
 }
