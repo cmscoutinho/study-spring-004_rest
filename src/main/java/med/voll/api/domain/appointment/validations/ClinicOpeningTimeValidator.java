@@ -16,7 +16,7 @@ public class ClinicOpeningTimeValidator {
         var isAfterClosing = appointmentDate.getHour() > 18;
 
         if(isSunday || isBeforeOpening || isAfterClosing) {
-            throw new ValidationException("Appointment outside the clinic's operating hours.")
+            throw new ValidationException("Appointment outside the clinic's operating hours.");
         }
     }
 }
