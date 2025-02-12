@@ -13,7 +13,7 @@ public class PatientWithNoAppointmentsOnSameDayValidator {
         var finalTime = data.date().withHour(18);
         var appointmentExists = repository.existsByPatientIdAndDateBetween(data.idPatient(), startTime, finalTime);
         if(appointmentExists) {
-            throw new ValidationException("Patient already has another appointment at the same day!");
+            throw new ValidationException("Patient already has another appointment in the same day!");
         }
     }
 }
