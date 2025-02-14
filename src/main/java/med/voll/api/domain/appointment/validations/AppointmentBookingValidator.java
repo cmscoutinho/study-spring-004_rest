@@ -1,4 +1,4 @@
 package med.voll.api.domain.appointment.validations;
 
-public class AppointmentBookingValidator {
+public interface AppointmentBookingValidator {
 }
