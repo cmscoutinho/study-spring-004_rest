@@ -38,7 +38,7 @@ cd study-spring-004_rest-main
 ```
 
 ## Build the project:
-./mvnw clean install
+`./mvnw clean install`
 
 ## Run the application:
 
