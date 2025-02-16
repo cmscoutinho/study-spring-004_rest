@@ -6,7 +6,7 @@ import med.voll.api.domain.appointment.AppointmentBookingData;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class PrecedingTimeValidator {
+public class PrecedingTimeValidator implements AppointmentBookingValidator {
 
     public void validate(AppointmentBookingData data) {
         var appointmentDate = data.date();
