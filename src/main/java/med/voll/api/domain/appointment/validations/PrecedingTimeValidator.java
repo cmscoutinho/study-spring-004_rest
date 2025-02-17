@@ -2,10 +2,12 @@ package med.voll.api.domain.appointment.validations;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+@Component
 public class PrecedingTimeValidator implements AppointmentBookingValidator {
 
     public void validate(AppointmentBookingData data) {

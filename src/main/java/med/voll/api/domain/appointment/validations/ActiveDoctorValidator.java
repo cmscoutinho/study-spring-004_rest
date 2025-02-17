@@ -3,7 +3,9 @@ package med.voll.api.domain.appointment.validations;
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
 import med.voll.api.domain.doctor.DoctorRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ActiveDoctorValidator implements AppointmentBookingValidator {
 
     private DoctorRepository repository;
