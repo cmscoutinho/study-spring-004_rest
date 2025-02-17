@@ -4,7 +4,7 @@ import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
 import med.voll.api.domain.patient.PatientRepository;
 
-public class ActivePatientValidator {
+public class ActivePatientValidator implements AppointmentBookingValidator {
 
     private PatientRepository repository;
 

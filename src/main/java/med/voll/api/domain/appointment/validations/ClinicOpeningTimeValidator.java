@@ -6,7 +6,7 @@ import med.voll.api.domain.appointment.AppointmentBookingData;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 
-public class ClinicOpeningTimeValidator {
+public class ClinicOpeningTimeValidator implements AppointmentBookingValidator {
 
     public void validate(AppointmentBookingData data) {
         var appointmentDate = data.date();
