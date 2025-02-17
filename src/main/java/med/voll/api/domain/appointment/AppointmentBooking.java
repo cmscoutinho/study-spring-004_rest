@@ -34,6 +34,8 @@ public class AppointmentBooking {
             throw new ValidationException("ID of given doctor does not exist!");
         }
 
+        validators.forEach(v -> v.validate(data));
+
         var patient = patientRepository.getReferenceById(data.idPatient());
         var doctor = chooseDoctor(data);
         var appointment = new Appointment(null, doctor, patient, data.date(), null);
