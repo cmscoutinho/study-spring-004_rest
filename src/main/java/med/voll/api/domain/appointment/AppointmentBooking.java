@@ -1,11 +1,14 @@
 package med.voll.api.domain.appointment;
 
 import med.voll.api.domain.ValidationException;
+import med.voll.api.domain.appointment.validations.AppointmentBookingValidator;
 import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class AppointmentBooking {
@@ -18,6 +21,9 @@ public class AppointmentBooking {
 
     @Autowired
     private PatientRepository patientRepository;
+
+    @Autowired
+    private List<AppointmentBookingValidator> validators;
 
     public void book(AppointmentBookingData data) {
         if(!patientRepository.existsById(data.idPatient())) {
