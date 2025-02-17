@@ -3,11 +3,13 @@ package med.voll.api.domain.appointment.validations;
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
 import med.voll.api.domain.patient.PatientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ActivePatientValidator implements AppointmentBookingValidator {
 
+    @Autowired
     private PatientRepository repository;
 
     public void validate(AppointmentBookingData data) {
