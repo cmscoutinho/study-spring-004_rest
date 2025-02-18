@@ -25,7 +25,7 @@ public class AppointmentBooking {
     @Autowired
     private List<AppointmentBookingValidator> validators;
 
-    public void book(AppointmentBookingData data) {
+    public AppointmentDetailmentData book(AppointmentBookingData data) {
         if(!patientRepository.existsById(data.idPatient())) {
             throw new ValidationException("ID of given patient does not exist!");
         }
@@ -40,6 +40,8 @@ public class AppointmentBooking {
         var doctor = chooseDoctor(data);
         var appointment = new Appointment(null, doctor, patient, data.date(), null);
         appointmentRepository.save(appointment);
+
+        return new AppointmentDetailmentData(appointment);
     }
 
     private Doctor chooseDoctor(AppointmentBookingData data) {
