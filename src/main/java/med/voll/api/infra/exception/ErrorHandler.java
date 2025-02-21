@@ -21,6 +21,12 @@ public class ErrorHandler {
         return ResponseEntity.badRequest().body(errors.stream().map(ValidationErrorData::new).toList());
     }
 
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity handleBusinessRuleError(MethodArgumentNotValidException exception) {
+        var errors = exception.getFieldErrors();
+        return ResponseEntity.badRequest().body(errors.stream().map(ValidationErrorData::new).toList());
+    }
+
     private record ValidationErrorData(String field, String message) {
         public ValidationErrorData(FieldError error) {
             this(error.getField(), error.getDefaultMessage());
