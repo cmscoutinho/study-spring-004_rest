@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Spring Boot-based REST API designed for managing appointments, doctors, patients, and authentication. It demonstrates how to structure a RESTful application while incorporating database migrations, validation, security, and custom exception handling.
+This project is a Spring Ecosystem-based REST API designed for managing appointments, doctors, patients, and authentication. It demonstrates how to structure a RESTful application while incorporating database migrations, validation, security, and custom exception handling.
 
 ## Features
 
