@@ -23,7 +23,9 @@ public class AppointmentBooking {
     private PatientRepository patientRepository;
 
     @Autowired
-    private List<AppointmentBookingValidator> validators;
+    private List<AppointmentBookingValidator> bookingValidators;
+    @Autowired
+    private List<AppointmentCancellationValidator>  cancellationValidators;
 
     public AppointmentDetailmentData book(AppointmentBookingData data) {
         if(!patientRepository.existsById(data.idPatient())) {
@@ -34,7 +36,7 @@ public class AppointmentBooking {
             throw new ValidationException("ID of given doctor does not exist!");
         }
 
-        validators.forEach(v -> v.validate(data));
+        bookingValidators.forEach(v -> v.validate(data));
 
         var patient = patientRepository.getReferenceById(data.idPatient());
         var doctor = chooseDoctor(data);
