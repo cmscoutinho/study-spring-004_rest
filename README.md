@@ -43,6 +43,7 @@ cd study-spring-004_rest-main
 ## Run the application:
 
 `./mvnw spring-boot:run`
+Or via your preferred IDE
 
 ## Access the API at:
 `http://localhost:8080`
