@@ -2,6 +2,7 @@ package med.voll.api.domain.appointment;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.validations.AppointmentBookingValidator;
+import med.voll.api.domain.appointment.validations.AppointmentCancellationValidator;
 import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;
@@ -64,6 +65,8 @@ public class AppointmentBooking {
         if (!appointmentRepository.existsById(data.idAppointment())) {
             throw new ValidationException("The given appointment id doesn't exist!");
         }
+
+        cancellationValidators.forEach(v -> v.validate(data));
 
         var appointment = appointmentRepository.getReferenceById(data.idAppointment());
         appointment.cancel(data.reason());
