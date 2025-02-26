@@ -1,8 +1,8 @@
 package med.voll.api.domain.appointment;
 
 import med.voll.api.domain.ValidationException;
-import med.voll.api.domain.appointment.validations.AppointmentBookingValidator;
-import med.voll.api.domain.appointment.validations.AppointmentCancellationValidator;
+import med.voll.api.domain.appointment.validations.booking.AppointmentBookingValidator;
+import med.voll.api.domain.appointment.validations.cancellation.AppointmentCancellationValidator;
 import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;

@@ -1,26 +1,26 @@
-package med.voll.api.domain.appointment.validations;
+package med.voll.api.domain.appointment.validations.booking;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
-import med.voll.api.domain.doctor.DoctorRepository;
+import med.voll.api.domain.patient.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ActiveDoctorValidator implements AppointmentBookingValidator {
+public class ActivePatientValidator implements AppointmentBookingValidator {
 
     @Autowired
-    private DoctorRepository repository;
+    private PatientRepository repository;
 
     public void validate(AppointmentBookingData data) {
-        var doctor = data.idDoctor();
+        var patient = data.idDoctor();
 
-        if (doctor == null) {
+        if (patient == null) {
             return;
         }
 
-        boolean isDoctorActive = repository.findActiveById(doctor);
-        if (!isDoctorActive) {
+        boolean isPatientActive = repository.findActiveById(patient);
+        if (!isPatientActive) {
             throw new ValidationException("The given doctor is not active!");
         }
     }

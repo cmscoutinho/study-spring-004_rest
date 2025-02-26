@@ -1,11 +1,10 @@
-package med.voll.api.domain.appointment.validations;
+package med.voll.api.domain.appointment.validations.booking;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
 import org.springframework.stereotype.Component;
 
 import java.time.DayOfWeek;
-import java.time.LocalDateTime;
 
 @Component
 public class ClinicOpeningTimeValidator implements AppointmentBookingValidator {

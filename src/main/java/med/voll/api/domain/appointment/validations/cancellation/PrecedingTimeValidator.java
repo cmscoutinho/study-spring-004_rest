@@ -1,7 +1,8 @@
-package med.voll.api.domain.appointment.validations;
+package med.voll.api.domain.appointment.validations.cancellation;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
+import med.voll.api.domain.appointment.validations.booking.AppointmentBookingValidator;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
