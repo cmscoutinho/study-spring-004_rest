@@ -1,4 +1,4 @@
-package med.voll.api.domain.appointment.validations.cancellation;
+package med.voll.api.domain.appointment.validations.booking;
 
 import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentBookingData;
