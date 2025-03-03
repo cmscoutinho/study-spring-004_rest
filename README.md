@@ -26,7 +26,7 @@ This project is a Spring Ecosystem-based REST API designed for managing appointm
 - Maven: Dependency and build management.
 
 ## Requirements
-- Java: JDK 17+
+- Java: JDK 20+
 - Maven: 3.8+
 - Installation
 
@@ -43,7 +43,7 @@ cd study-spring-004_rest-main
 ## Run the application:
 
 `./mvnw spring-boot:run`
-Or via your preferred IDE
+Or via your preferred IDE,such as Intellij Idea. 
 
 ## Access the API at:
 `http://localhost:8080`
