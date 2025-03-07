@@ -13,7 +13,7 @@ public class DoctorWithAnotherAppointmentAtSameTimeValidator implements Appointm
     private AppointmentRepository repository;
 
     public void validate(AppointmentBookingData data) {
-        var doctorHasAnotherAppointmentAtSameTime = repository.existsByDoctorIdAndDate(data.idDoctor(), data.date());
+        var doctorHasAnotherAppointmentAtSameTime = repository.existsByDoctorIdAndDateAndReasonCancellationIsNull(data.idDoctor(), data.date());
         if(doctorHasAnotherAppointmentAtSameTime) {
             throw new ValidationException("Doctor already has another appointment at the same time!");
         }
