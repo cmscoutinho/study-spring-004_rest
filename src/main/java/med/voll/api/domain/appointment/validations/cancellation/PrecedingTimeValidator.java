@@ -4,10 +4,12 @@ import med.voll.api.domain.ValidationException;
 import med.voll.api.domain.appointment.AppointmentCancellationData;
 import med.voll.api.domain.appointment.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+@Component("PrecedingTimeCancellationValidator")
 public class PrecedingTimeValidator implements AppointmentCancellationValidator{
 
 
