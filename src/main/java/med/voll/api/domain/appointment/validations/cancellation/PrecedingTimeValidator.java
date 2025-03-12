@@ -23,7 +23,7 @@ public class PrecedingTimeValidator implements AppointmentCancellationValidator{
         var hourDifference = Duration.between(now, appointment.getDate()).toHours();
 
         if (hourDifference < 24) {
-            throw new ValidationException("Appointments might be cancelled only up to 24 hours before!");
+            throw new ValidationException("Appointments may be cancelled only up to 24 hours before!");
         }
     }
 }
